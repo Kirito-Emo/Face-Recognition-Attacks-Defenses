@@ -1,0 +1,138 @@
+\documentclass[a4paper, oneside]{book}
+\usepackage[margin=2.5cm, bindingoffset=1cm]{geometry}
+\linespread{1.5}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{1cm}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{accsupp}
+% For images
+\usepackage[inkscapelatex=false]{svg}
+\usepackage{fontawesome5}
+% For WP3 chart
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{polar}
+\usepackage{lscape}
+\usepackage{booktabs}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \uppercase{#1}}{}}
+\fancyhf{}
+\fancyhead[C]{\textbf{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\usepackage[Conny]{fncychap}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    columns=fullflexible,
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{gray}\hookrightarrow\space}},
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+\lstset{style=mystyle}
+
+\title{AI4cybersecurity Project}
+\author{reverseEkans}
+\date{May 2025}
+
+\renewcommand{\contentsname}{\bf Indice}
+\renewcommand{\chaptername}{Capitolo}
+  
+\begin{document}
+    %Frontespizio
+    \begin{titlepage}
+        \begin{center}
+            \LARGE{\uppercase{Università degli Studi di Salerno}}\\
+            \vspace{5mm}
+            %Dipartimento
+        	\uppercase{\normalsize \textbf{Dipartimento di Ingegneria dell'Informazione ed Elettrica e Matematica Applicata} }\\
+        \end{center}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.35\textwidth]{images/logo_unisa.png}
+        \end{figure}
+        
+        \begin{center}
+            % Corso di Laurea
+        	\normalsize{ Corso di Laurea Magistrale in Ingegneria Informatica }\\
+        	\vspace{15mm}
+        	% Titolo
+            {\Large{\bf \textbf{Security assessment of a
+face recognition system}}}\\
+        	\vspace{15mm}
+            % Sottotitolo
+            {\Large{reverseEkans - gruppo 10}}
+            \vspace{10mm}
+        \end{center}
+
+        \begin{center}
+            \begin{tabular}{ | c | c | c | c |} \hline
+                \textbf{Nome} & \textbf{Cognome} & \textbf{Matricola} & \textbf{E-Mail} \\
+                \hline
+                Giuseppe Alfonso & Mangiola & 0622702372 & g.mangiola1@studenti.unisa.it \\
+                \hline
+                Emanuele & Relmi & 0622702368 & e.relmi@studenti.unisa.it\\
+                \hline
+                Francesco & Quagliuolo & 0622702412 & f.quagliuolo@studenti.unisa.it\\
+                \hline
+                Luca & Concilio & 0622702415 & l.concilio9@studenti.unisa.it\\
+                \hline
+            \end{tabular}
+        \end{center}
+        
+        \vspace{20mm}
+        
+        %Anno Accademico
+        \centering{\large \uppercase{Anno Accademico 2024/2025}}
+    
+    \end{titlepage}
+
+    %Corpo del Documento
+    \tableofcontents
+    \clearpage
+    \sloppy
+    \hyphenpenalty=10000
+    \exhyphenpenalty=10000
+    
+    \input{Sections/introduction}
+    \input{Sections/capitolo1}
+    \input{Sections/capitolo2}
+    \input{Sections/capitolo3}
+    \input{Sections/capitolo4}
+    \input{Sections/capitolo5}
+
+\end{document}
